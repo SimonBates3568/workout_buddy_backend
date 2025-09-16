@@ -11,7 +11,10 @@ const port = process.env.PORT;
 app.use(express.json());
 
 const corsOptions = {
-  origin: 'https://workout-buddy-frontend-ruddy.vercel.app', // replace with your actual frontend URL
+  //production
+  // origin: 'https://workout-buddy-frontend-ruddy.vercel.app',
+  //development
+  origin: 'http://localhost:3000', // replace with your actual frontend URL
   credentials: true, // if you use cookies or sessions
 };
 
