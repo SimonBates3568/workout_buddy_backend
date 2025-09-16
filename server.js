@@ -9,7 +9,13 @@ const port = process.env.PORT;
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+
+const corsOptions = {
+  origin: 'https://workout-buddy-frontend-ruddy.vercel.app', // replace with your actual frontend URL
+  credentials: true, // if you use cookies or sessions
+};
+
+app.use(cors(corsOptions));
 
 //logging middleware
 app.use((req, res, next) => {
